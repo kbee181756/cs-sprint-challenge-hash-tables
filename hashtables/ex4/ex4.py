@@ -1,9 +1,11 @@
-def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+def has_negatives(int_list):
+    cache = {}
+    result = []
+    for i in int_list:
+        if -i in cache:
+            result.append(abs(i))
+        else:
+            cache[i] = True 
     return result
 
 
